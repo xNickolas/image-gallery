@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --app-background: #fff;
+  /* Set a default background */
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background: var(--app-background) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+@media (min-width: 1200px) {
+  .container:not(.container-bs):not(.container-xl-custom):not(.container-xxl-custom) {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin-top: var(--bs-gutter-y);
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.col-3, .col-lg-3, .col-md-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.button {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--black);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.50rem;
+  margin: 0.3rem 0;
+  padding: 0.533rem 0.933rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.button-dark {
+  background-color: #212529;
+  border-color: #212529 #212529 #0a0c0d;
+  color: #fff;
+  font-family: Praktika, sans-serif;
+  font-weight: 700;
+}
+
+.button-dark:hover {
+  background-color: #212529;
+  color: #eeeeee;
+}

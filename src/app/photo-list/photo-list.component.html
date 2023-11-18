@@ -1,0 +1,46 @@
+<div class="container images-list">
+  <div class="row nav-image-list align-items-center">
+    <div class="col-6">
+      <h1 class="title">Welcome to the Gallery</h1>
+    </div>
+    <div class="col-6">
+      <button class="button button-dark" (click)="logout()">Logout</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3" *ngFor="let photo of photos">
+      <span class="thumb-info thumb-info-lighten thumb-info-bottom-info thumb-info-centered-icons">
+
+        <span class="thumb-info-wrapper">
+          <img class="image-item" [src]="photo.url" alt="{{ photo.title }}" />
+
+          <span class="thumb-info-title">
+            <span class="thumb-info-inner line-height-1 font-weight-bold text-dark position-relative top-3">
+              {{ photo.title }}
+            </span>
+            <!-- <span class="thumb-info-type">{{ photo.description }}</span> -->
+            <button class="button button-dark" (click)="setBackground(photo.url)">
+              <span> Change Background </span>
+            </button>
+          </span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <div class="nav-wrapper">
+        <button class="previous" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        
+        <span class="current-page">{{ currentPage }}</span>
+
+        <span class="page-number" *ngIf="currentPage < totalPages">{{ currentPage + 1 }}</span>
+
+        <button class="next" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+
+    </div>
+  </div>
+</div>
