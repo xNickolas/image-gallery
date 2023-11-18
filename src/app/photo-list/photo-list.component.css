@@ -31,6 +31,11 @@
   letter-spacing: 0px;
 }
 
+.logout {
+  width: 25%;
+  font-size: 0.9em;
+}
+
 .nav-image-list {
   position: relative;
   z-index: 99999;
@@ -71,7 +76,7 @@
 }
 
 .nav-wrapper .previous, .nav-wrapper .next {
-  color: #2193fd;
+  color: #f07400;
   font-weight: bold;
   background-color: transparent;
   font-size: 0.95rem;
@@ -81,7 +86,7 @@
 }
 
 .nav-wrapper .previous:hover, .nav-wrapper .next:hover {
-  color: #0565be;
+  color: #b95a00;
 }
 
 .nav-wrapper .current-page {
@@ -89,7 +94,7 @@
   font-weight: bold;
   font-size: 0.95rem;
   line-height: 2.1;
-  background-color: #2193fd;
+  background-color: #f07400;
   border: none;
   height: 2rem;
   width: 2rem;
@@ -99,16 +104,13 @@
 }
 
 .nav-wrapper .page-number {
-  color: #2193fd;
+  color: #f07400;
   font-weight: bold;
   background-color: transparent;
   font-size: 0.95rem;
   border: none;
   margin: 0 5px;
 }
-
-
-
 
 .thumb-info {
   display: block;

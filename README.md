@@ -9,7 +9,6 @@ This Angular application allows users to browse a photo gallery from a public RE
 - [Features](#features)
 - [Components](#components)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 

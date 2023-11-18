@@ -1,13 +1,12 @@
-// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PhotoListComponent } from './photo-list/photo-list.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './auth.guard'; // Add AuthGuard
+import { AuthGuard } from './auth.guard'; 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'photo-list', component: PhotoListComponent, canActivate: [AuthGuard] }, // Use AuthGuard
+  { path: 'photo-list', component: PhotoListComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

@@ -1,8 +1,7 @@
-// login.component.ts
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services//auth.service';
 import { Router } from '@angular/router';
-import { BackgroundService } from '../background.service';
+// import { BackgroundService } from '../services//background.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +18,7 @@ export class LoginComponent {
   login(): void {
     // Check if username and password are not empty
     if (this.username.trim() === '' || this.password.trim() === '') {
-      this.errorMessage = 'Please fill in both username and password.';
+      this.errorMessage = 'Please fill in any both username and password.';
       return;
     }
 

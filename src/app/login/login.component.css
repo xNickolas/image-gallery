@@ -42,6 +42,14 @@
   opacity: 1;
 }
 
+.form-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #707070;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
 .sign-in-form {
   display: flex;
   flex-direction: column;
@@ -70,7 +78,7 @@
 
 .form-group-input input:focus {
   outline: none;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #f07400;
   transition: all 0.3s ease;
 }
 
@@ -78,7 +86,7 @@
 .form-group-input input:valid~label {
   transform: translateY(-20px);
   font-size: 14px;
-  color: #3498db;
+  color: #f07400;
 }
 
 .form-group-input label {
@@ -94,7 +102,11 @@
   font-size: 1em;
   color: rgb(243, 101, 101);
   text-align: left;
-  /* Align error message to the left */
+}
+
+.button {
+  width: 100%;
+  font-size: 0.9rem;
 }
 
 

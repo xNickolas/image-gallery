@@ -1,4 +1,3 @@
-// auth.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -10,8 +9,7 @@ export class AuthService {
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
 
   login(username: string, password: string): void {
-    // Add your authentication logic here
-    // For simplicity, let's assume any non-empty values are valid
+    // Authentication logic here
     const isValid = username.trim() !== '' && password.trim() !== '';
     this.isLoggedInSubject.next(isValid);
   }
