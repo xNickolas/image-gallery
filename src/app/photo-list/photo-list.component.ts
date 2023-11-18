@@ -14,6 +14,7 @@ export class PhotoListComponent implements OnInit {
   currentPage = 1;
   itemsPerPage = 12;
   totalItems = 0;
+  pagesToShow = 8; 
 
   constructor(
     private photoService: PhotoService,
@@ -53,6 +54,23 @@ export class PhotoListComponent implements OnInit {
     }
   }
 
+  setPage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.loadPhotos();
+    }
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.totalItems / this.itemsPerPage);
+  }
+
+  get pageRange(): number[] {
+    const start = Math.max(1, this.currentPage);
+    const end = Math.min(this.totalPages, start + this.pagesToShow - 1);
+    return Array.from({ length: end - start + 1 }, (_, i) => i + start + 1);
+  }
+
   setBackground(url: string): void {
     this.backgroundService.setBackgroundUrl(url);
   }
@@ -61,9 +79,5 @@ export class PhotoListComponent implements OnInit {
     console.log('Logging out...');
     this.authService.logout();
     this.router.navigate(['']); // Redirect to login directly
-  }
-
-  get totalPages(): number {
-    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 }

@@ -36,7 +36,9 @@
         
         <span class="current-page">{{ currentPage }}</span>
 
-        <span class="page-number" *ngIf="currentPage < totalPages">{{ currentPage + 1 }}</span>
+        <span class="page-number" *ngFor="let page of pageRange" (click)="setPage(page)">
+          {{ page }}
+        </span>
 
         <button class="next" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
       </div>

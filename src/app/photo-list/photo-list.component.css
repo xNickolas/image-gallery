@@ -101,6 +101,7 @@
   border-radius: 50%;
   transition: transform .5s ease-in-out;
   transform: translateX(0rem);
+  cursor: not-allowed;
 }
 
 .nav-wrapper .page-number {
@@ -110,6 +111,7 @@
   font-size: 0.95rem;
   border: none;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 .thumb-info {
@@ -256,3 +258,19 @@
   opacity: 1;
 }
 
+
+@media screen and (max-width: 768px) {
+  .nav-wrapper .previous, .nav-wrapper .next {
+    font-size: 0.6rem;
+  }
+
+  .nav-wrapper .current-page {
+    font-size: 0.6rem;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  
+  .nav-wrapper .page-number {
+    font-size: 0.6rem;
+  }
+}
